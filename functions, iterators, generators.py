@@ -65,3 +65,23 @@ def fib(n):
 for i in fib(10):
     print(i)
     
+def fib(n):
+    a = 1
+    b = 1   
+    for i in range(n):
+        yield a,i
+        a,b = b , a+b
+        
+for i in fib(10):
+    print(i)
+
+def fib1(n):
+    a = 1
+    b = 1
+    k=[]
+    for i in range(n):
+        k.append(a)
+        a,b = b  , a+b
+    return k
+
+fib1(12)

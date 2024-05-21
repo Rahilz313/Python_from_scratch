@@ -241,3 +241,11 @@ def fib(n):
     return n + fib(n-1) 
 fib()
        
+# Nested functions
+def fun(n):
+    if(n>100):
+        return n-10
+    else:
+        return fun(fun(n+11))
+
+fun(95)
